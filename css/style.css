@@ -2,6 +2,12 @@
 Author: W3layout
 Author URL: http://w3layouts.com
 --*/
+body {
+  overflow-y: hidden; 
+  overflow-x: hidden; 
+}
+
+
 body a{
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
