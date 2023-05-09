@@ -431,3 +431,46 @@
         $('[data-jarallax]').jarallax();
     });
 }));
+
+const lib = require('lib')({token: process.env.STDLIB_SECRET_TOKEN});
+
+await lib.discord.channels['@0.3.2'].messages.create({
+  "channel_id": `${context.params.event.channel_id}`,
+  "content": "",
+  "tts": false,
+  "components": [
+    {
+      "type": 1,
+      "components": [
+        {
+          "style": 5,
+          "label": `Play now!`,
+          "url": `https://www.polyracing.xyz/`,
+          "disabled": false,
+          "type": 2
+        },
+        {
+          "style": 5,
+          "label": `Join Discord`,
+          "url": `https://discord.gg/polyracing`,
+          "disabled": false,
+          "type": 2
+        }
+      ]
+    }
+  ],
+  "embeds": [
+    {
+      "type": "rich",
+      "title": `Poly Racing`,
+      "description": `Welcome to PolyRacing! Get ready to experience the thrill of high-speed racing like never before. Our game features stunning graphics and animations, with a unique poly style that sets it apart from other racing games. You'll feel like you're racing through a futuristic world filled with bright colors and sharp angles.`,
+      "color": 0xefa208,
+      "image": {
+        "url": `https://media.discordapp.net/attachments/1101321551862845600/1105479816867741706/AUAvIonqlvmiAAAAAElFTkSuQmCC.png?width=758&height=300`,
+        "height": 0,
+        "width": 0
+      },
+      "url": `https://polyracing.xyz`
+    }
+  ]
+});
